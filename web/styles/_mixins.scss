@@ -1,0 +1,264 @@
+// Box class
+@mixin generate-box-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}Box#{$lm-size} {
+            width: #{$lm-size}#{$lm-unit};
+            height: #{$lm-size}#{$lm-unit};
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+// Width class
+@mixin generate-width-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}Width#{$lm-size} {
+            width: #{$lm-size}#{$lm-unit};
+        }
+        .#{$prefix}MaxWidth#{$lm-size} {
+            max-width: #{$lm-size}#{$lm-unit};
+        }
+        .#{$prefix}MinWidth#{$lm-size} {
+            min-width: #{$lm-size}#{$lm-unit};
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+// Height class
+@mixin generate-height-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}Height#{$lm-size} {
+            height: #{$lm-size}#{$lm-unit};
+        }
+        .#{$prefix}NaxHeight#{$lm-size} {
+            max-height: #{$lm-size}#{$lm-unit};
+        }
+        .#{$prefix}MinHeight#{$lm-size} {
+            min-height: #{$lm-size}#{$lm-unit};
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+// Padding class
+@mixin generate-padding-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        $lm-padding-directions: Top Right Bottom Left;
+        $lm-padding-combinations: X Y;
+        @each $direction in $lm-padding-directions {
+            .#{$prefix}Padding#{$direction}#{$lm-size} {
+                padding-#{$direction}: #{$lm-size}#{$lm-unit};
+            }
+            .#{$prefix}Padding#{$lm-size} {
+                padding: #{$lm-size}#{$lm-unit};
+            }
+        }
+        @each $combination in $lm-padding-combinations {
+            $direction1: if($combination == "X", "Left", "Top");
+            $direction2: if($combination == "X", "Right", "Bottom");
+            .#{$prefix}Padding#{$combination}#{$lm-size} {
+                padding-#{$direction1}: #{$lm-size}#{$lm-unit};
+                padding-#{$direction2}: #{$lm-size}#{$lm-unit};
+            }
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+// Gap class
+@mixin generate-gap-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}Gap#{$lm-size} {
+            gap: #{$lm-size}#{$lm-unit};
+        }
+        $lm-size: $lm-size + if($i == 1, 1, if($i == 2, 2, if($i >= 3, 4, 0)));
+    }
+}
+
+// Font weight class
+@mixin generate-font-weight-class($lm-min, $lm-max) {
+    $lm-size: $lm-min;
+    @while $lm-size <= $lm-max {
+        .#{$prefix}FontWeight#{$lm-size} {
+            font-weight: #{$lm-size};
+        }
+        $lm-size: $lm-size + 100;
+    }
+}
+
+// Font size class
+@mixin generate-font-size-class($lm-max, $lm-unit) {
+    $lm-size: 1;
+    @for $i from 1 through $lm-max {
+        .#{$prefix}FontSize#{$lm-size} {
+            font-size: #{$lm-size}#{$lm-unit};
+        }
+        .#{$prefix}PlaceholderFontSize#{$lm-size}::placeholder {
+            font-size: #{$lm-size}#{$lm-unit};
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+// Border radius class
+@mixin generate-border-radius-class($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        
+        /* All corners */
+        .#{$prefix}BorderRadius#{$i} {
+            border-radius: #{$i}px;
+        }
+
+        /* Specific corners */
+        .#{$prefix}BorderRadiusTopRight#{$i} {
+            border-top-right-radius: #{$i}px;
+        }
+        .#{$prefix}BorderRadiusBottomRight#{$i} {
+            border-bottom-right-radius: #{$i}px;
+        }
+        .#{$prefix}BorderRadiusBottomLeft#{$i} {
+            border-bottom-left-radius: #{$i}px;
+        }
+        .#{$prefix}BorderRadiusTopLeft#{$i} {
+            border-top-left-radius: #{$i}px;
+        }
+    }
+}
+
+// Margin class
+@mixin generate-margin-class($lm-min, $lm-max, $lm-unit) {
+    $lm-size: $lm-min;
+    @for $i from $lm-min through $lm-max {
+        $lm-margin-directions: Top Right Bottom Left;
+        $lm-margin-combinations: X Y;
+        @each $direction in $lm-margin-directions {
+            .#{$prefix}Margin#{$direction}#{$lm-size} {
+                margin-#{$direction}: #{$lm-size}#{$lm-unit};
+            }
+            .#{$prefix}Margin#{$direction}Negative#{$lm-size} {
+                margin-#{$direction}: -#{$lm-size}#{$lm-unit};
+            }
+            .#{$prefix}Margin#{$lm-size} {
+                margin: #{$lm-size}#{$lm-unit};
+            }
+        }
+        @each $combination in $lm-margin-combinations {
+            $direction1: if($combination == "X", "Left", "Top");
+            $direction2: if($combination == "X", "Right", "Bottom");
+            .#{$prefix}Margin#{$combination}#{$lm-size} {
+                margin-#{$direction1}: #{$lm-size}#{$lm-unit};
+                margin-#{$direction2}: #{$lm-size}#{$lm-unit};
+            }
+            .#{$prefix}Margin#{$combination}Negative#{$lm-size} {
+                margin-#{$direction1}: -#{$lm-size}#{$lm-unit};
+                margin-#{$direction2}: -#{$lm-size}#{$lm-unit};
+            }
+        }
+        $lm-size: $lm-size + 1;
+    }
+}
+
+
+@mixin generate-z-index($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}ZIndex#{$i} {
+            z-index: $i;
+        }
+    }
+}
+
+@mixin generate-transition($start, $iterations, $increments) {
+    $duration: $start;
+    @for $i from 1 through $iterations {
+        .#{$prefix}Transition#{$duration} {
+            transition: #{$duration}ms;
+        }
+        $duration: $duration + $increments;
+    }
+}
+
+@mixin generate-percentage($start, $end) {
+    @for $i from $start through $end {
+        $percentage: if($i != 100, $i + "%", "100%");
+        .#{$prefix}W#{$i} {
+            width: unquote($percentage);
+        }
+        .#{$prefix}H#{$i} {
+            height: unquote($percentage);
+        }
+        .#{$prefix}Top#{$i}P {
+            top: unquote($percentage);
+        }
+        .#{$prefix}Right#{$i}P {
+            left: unquote($percentage);
+        }
+        .#{$prefix}Bottom#{$i}P {
+            top: unquote($percentage);
+        }
+        .#{$prefix}Left#{$i}P {
+            left: unquote($percentage);
+        }
+        .#{$prefix}FlexBasis#{$i}P {
+            flex-basis: unquote($percentage);
+        }
+    }
+}
+
+@mixin generate-border-radius-percentage($start, $end) {
+    @for $i from $start through $end {
+        $percentage: if($i != 100, $i + "%", "100%");
+        .#{$prefix}BorderRadius#{$i}P {
+            border-radius: unquote($percentage);
+        }
+    }
+}
+
+@mixin generate-letter-spacing($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}LetterSpacing#{$i} {
+            letter-spacing: #{$i}px;
+        }
+    }
+}
+
+@mixin generate-line-height($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}LineHeight#{$i} {
+            line-height: #{$i}px;
+        }
+    }
+}
+
+@mixin generate-location($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}Bottom#{$i} {
+            bottom: #{$i}px;
+        }
+
+        .#{$prefix}Top#{$i} {
+            top: #{$i}px;
+        }
+
+        .#{$prefix}Left#{$i} {
+            left: #{$i}px;
+        }
+
+        .#{$prefix}Right#{$i} {
+            right: #{$i}px;
+        }
+    }
+}
+
+@mixin generate-grid-gap($lm-min, $lm-max) {
+    @for $i from $lm-min through $lm-max {
+        .#{$prefix}GridGap#{$i} {
+            grid-gap: #{$i}px;
+        }
+    }
+}

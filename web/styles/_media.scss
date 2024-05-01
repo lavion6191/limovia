@@ -1,0 +1,70 @@
+/* Media queries to hide elements based on screen sizes */
+@media screen and (min-width: 1025px) {
+    .#{$prefix}HideOnLargeScreen            { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: block; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: none; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 914px) {
+    .#{$prefix}HideOnMediumLargeScreen      { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: block; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: none; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 913px) and (min-width: 822px) {
+    .#{$prefix}HideOnMediumScreen           { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: block; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 821px) and (min-width: 770px) {
+    .#{$prefix}HideOnSmallMediumScreen      { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: block; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 769px) and (min-width: 542px) {
+    .#{$prefix}HideOnSmallScreen            { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: none; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: block; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 541px) and (min-width: 427px) {
+    .#{$prefix}HideOnExtraSmallScreen       { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: none; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: block; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: none; }
+}
+
+@media screen and (max-width: 426px) {
+    .#{$prefix}HideOnExtraSmallScreen       { display: none; }
+    .#{$prefix}OnlyShowOnLargeScreen        { display: none; }
+    .#{$prefix}OnlyShowOnMediumLargeScreen  { display: none; }
+    .#{$prefix}OnlyShowOnMediumScreen       { display: none; }
+    .#{$prefix}OnlyShowOnSmallMediumScreen  { display: none; }
+    .#{$prefix}OnlyShowOnSmallScreen        { display: none; }
+    .#{$prefix}OnlyShowOnExtraSmallScreen   { display: block; }
+}

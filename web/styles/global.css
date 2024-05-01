@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@font-face {
+    font-family: "Hedvig Serif";
+    src: url("../public/fonts/HedvigLettersSerif-Regular-VariableFont_opsz.ttf");
+}
+
+@font-face {
+    font-family: "Isabel Light";
+    src: url("../public/fonts/Fontspring-DEMO-isabel-light.otf");
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

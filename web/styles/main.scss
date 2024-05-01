@@ -1,0 +1,350 @@
+/* main.scss */
+
+/* Prefix */
+@function prefixed($name) { @return #{$prefix + $name}; }
+
+$prefix: lv;
+
+/* Imports */
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+
+/* Displays */
+.#{prefixed('Block')}                       { display: block;           }
+.#{prefixed('Flex')}                        { display: flex;            }
+.#{prefixed('InlineBlock')}                 { display: inline-block;    }
+.#{prefixed('Inline')}                      { display: inline;          }
+.#{prefixed('Grid')}                        { display: grid;            }
+.#{prefixed('InlineFlex')}                  { display: inline-flex      }
+
+@import 'media';
+
+@include generate-box-class                 (1,  512, px);
+@include generate-width-class               (1, 1024, px);
+@include generate-height-class              (1, 1024, px);
+@include generate-padding-class             (1,  512, px);
+@include generate-margin-class              (1,  512, px);
+@include generate-gap-class                 (1,  19,  px);
+@include generate-font-weight-class         (100,    900);
+@include generate-font-size-class           (72,      px);
+@include generate-border-radius-class       (0,       64);
+@include generate-z-index                   (1,     1000);
+@include generate-transition                (100, 91, 10);
+@include generate-percentage                (0,      100);
+@include generate-letter-spacing            (1,       16);
+@include generate-line-height               (1,       50);
+@include generate-location                  (0,       32);
+@include generate-border-radius-percentage  (0,      100);
+@include generate-grid-gap                  (0,      100);
+
+/* Logo Gradient */
+.#{prefixed('LogoGradient')} {
+    background: linear-gradient(
+        90deg, 
+        var(--Primary1) 0%, 
+        var(--Primary2) 50%, 
+        var(--Primary1) 100%);
+}
+
+/* Positions */
+.#{prefixed('PositionFixed')}               { position: fixed;      }
+.#{prefixed('PositionRelative')}            { position: relative;   }
+.#{prefixed('PositionAbsolute')}            { position: absolute;   }
+.#{prefixed('PositionStatic')}              { position: static;     }
+.#{prefixed('PositionSticky')}              { position: sticky;     }
+
+/* Margins */
+.#{prefixed('MarginYAuto')}                 { margin-top:   auto;       margin-bottom:  auto;   }
+.#{prefixed('MarginXAuto')}                 { margin-left:  auto;       margin-right:   auto;   }
+.#{prefixed('MarginY0')}                    { margin-top:   0;          margin-bottom:  0;      }
+.#{prefixed('MarginX0')}                    { margin-left:  0;          margin-right:   0;      }
+
+/* Alignment */
+.#{prefixed('AlignItemsStart')}             { align-items: start                }
+.#{prefixed('AlignItemsFlexStart')}         { align-items: flex-start           }
+.#{prefixed('AlignItemsCenter')}            { align-items: center;              }
+.#{prefixed('AlignItemsEnd')}               { align-items: end                  }
+.#{prefixed('AlignItemsBaseline')}          { align-items: baseline;            }
+.#{prefixed('AlignItemsStretch')}           { align-items: stretch;             }
+
+/* Justify Content */
+.#{prefixed('JustifyContentSpaceEvenly')}   { justify-content: space-evenly;    }
+.#{prefixed('JustifyContentSpaceBetween')}  { justify-content: space-between;   }
+.#{prefixed('JustifyContentSpaceAround')}   { justify-content: space-around;    }
+.#{prefixed('JustifyContentCenter')}        { justify-content: center;          }
+.#{prefixed('JustifyContentStart')}         { justify-content: flex-start;      }
+.#{prefixed('JustifyContentEnd')}           { justify-content: flex-end;        }
+
+/* Box Sizing */
+.#{prefixed('BoxSizingBorderBox')}          { box-sizing: border-box;           }
+.#{prefixed('BoxSizingContentBox')}         { box-sizing: content-box;          }
+
+/* REM Gaps */
+.#{prefixed('Gap1Rem')}                     { gap: 1rem;                        }
+.#{prefixed('Gap2Rem')}                     { gap: 2rem;                        }
+.#{prefixed('Gap3Rem')}                     { gap: 3rem;                        }
+
+/* REM Padding */
+.#{prefixed('Padding0_1Rem')}               { padding: 0.1rem;                  }
+.#{prefixed('Padding0_2Rem')}               { padding: 0.2rem;                  }
+.#{prefixed('Padding0_3Rem')}               { padding: 0.3rem;                  }
+.#{prefixed('Padding0_4Rem')}               { padding: 0.4rem;                  }
+.#{prefixed('Padding0_5Rem')}               { padding: 0.5rem;                  }
+.#{prefixed('Padding0_6Rem')}               { padding: 0.6rem;                  }
+.#{prefixed('Padding0_7Rem')}               { padding: 0.7rem;                  }
+.#{prefixed('Padding0_8Rem')}               { padding: 0.8rem;                  }
+.#{prefixed('Padding0_9Rem')}               { padding: 0.9rem;                  }
+
+/* EM Font Size*/
+.#{prefixed('FontSize1Em')}                 { font-size: 1em;                   }
+.#{prefixed('FontSize2Em')}                 { font-size: 2em;                   }
+.#{prefixed('FontSize3Em')}                 { font-size: 3em;                   }
+.#{prefixed('FontSize4Em')}                 { font-size: 4em;                   }
+.#{prefixed('FontSize5Em')}                 { font-size: 5em;                   }
+
+/* REM Font Size */
+.#{prefixed('FontSize1Rem')}                { font-size: 1rem;                  }
+.#{prefixed('FontSize2Rem')}                { font-size: 2rem;                  }
+.#{prefixed('FontSize3Rem')}                { font-size: 3rem;                  }
+.#{prefixed('FontSize4Rem')}                { font-size: 4rem;                  }
+.#{prefixed('FontSize5Rem')}                { font-size: 5rem;                  }
+
+/* List Styles */
+.#{prefixed('ListStyleNone')}               { list-style: none;                 }
+.#{prefixed('ListStyleCircle')}             { list-style: circle;               }
+.#{prefixed('ListStyleSquare')}             { list-style: square;               }
+.#{prefixed('ListStyleDisc')}               { list-style: disc;                 }
+.#{prefixed('ListStyleDecimal')}            { list-style: decimal;              }
+
+/* White Space No Wrap*/
+.#{prefixed('WhiteSpaceNoWrap')}            { white-space: nowrap;              }
+
+/* Text Decorations */
+.#{prefixed('TextDecorationNone')}          { text-decoration: none;            }
+.#{prefixed('TextDecorationUnderline')}     { text-decoration: underline;       }
+.#{prefixed('TextDecorationOverline')}      { text-decoration: overline;        }
+.#{prefixed('TextDecorationLineThrough')}   { text-decoration: line-through;    }
+
+/* Cursor */
+.#{prefixed('CursorPointer')}               { cursor: pointer;                  }
+.#{prefixed('CursorGrab')}                  { cursor: grab;                     }
+.#{prefixed('CursorGrabbing')}              { cursor: grabbing;                 }
+.#{prefixed('CursorNotAllowed')}            { cursor: not-allowed;              }
+.#{prefixed('CursorZoomIn')}                { cursor: zoom-in;                  }
+.#{prefixed('CursorZoomOut')}               { cursor: zoom-out;                 }
+
+/* Webkit Background Clip */
+.#{prefixed('WebkitBackgroundClipText')} {
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Webkit Text Fill Color */
+.#{prefixed('WebkitTextFillColorTransparent')} {
+    -webkit-text-fill-color: transparent;
+}
+
+/* Webkit Appearance */
+.#{prefixed('WebkitAppearanceNone')} {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Font Weights */
+.#{prefixed('FontWeightLighter')}   { font-weight: lighter;     }
+.#{prefixed('FontWeightNormal')}    { font-weight: normal;      }
+.#{prefixed('FontWeightBold')}      { font-weight: bold;        }
+.#{prefixed('FontWeightBolder')}    { font-weight: bolder;      }
+
+/* Remove properties */
+.#{prefixed('BorderNone')}          { border: none;             }
+.#{prefixed('OutlineNone')}         { outline: none;            }
+.#{prefixed('ShadowNone')} { 
+    box-shadow: none;  
+    text-shadow: none;
+}
+
+/* Font Sizes*/
+.#{prefixed('FontSizeSmall')}       { font-size: small;         }
+.#{prefixed('FontSizeMedium')}      { font-size: medium;        }
+.#{prefixed('FontSizeLarge')}       { font-size: large;         }
+.#{prefixed('FontSizeLarger')}      { font-size: larger;        }
+
+/* Font styles */
+.#{prefixed('FontStyleNone')}       { font-style: normal;       }
+.#{prefixed('FontStyleNormal')}     { font-style: normal;       }
+.#{prefixed('FontStyleItalic')}     { font-style: italic;       }
+.#{prefixed('FontStyleOblique')}    { font-style: oblique;      }
+
+/* Border styles */
+.#{prefixed('BorderStyleNone')}     { border-style: none;       }
+.#{prefixed('BorderStyleHidden')}   { border-style: hidden;     }
+.#{prefixed('BorderStyleDotted')}   { border-style: dotted;     }
+.#{prefixed('BorderStyleDashed')}   { border-style: dashed;     }
+.#{prefixed('BorderStyleSolid')}    { border-style: solid;      }
+.#{prefixed('BorderStyleDouble')}   { border-style: double;     }
+.#{prefixed('BorderStyleGroove')}   { border-style: groove;     }
+.#{prefixed('BorderStyleRidge')}    { border-style: ridge;      }
+.#{prefixed('BorderStyleInset')}    { border-style: inset;      }
+.#{prefixed('BorderStyleOutset')}   { border-style: outset;     }
+
+/* Border pixel sizes */
+.#{prefixed('BorderWidth0_1')}      { border-width: 0.1px;      }
+.#{prefixed('BorderWidth0_2')}      { border-width: 0.2px;      }
+.#{prefixed('BorderWidth0_3')}      { border-width: 0.3px;      }
+.#{prefixed('BorderWidth0_4')}      { border-width: 0.4px;      }
+.#{prefixed('BorderWidth0_5')}      { border-width: 0.5px;      }
+.#{prefixed('BorderWidth0_6')}      { border-width: 0.6px;      }
+.#{prefixed('BorderWidth0_7')}      { border-width: 0.7px;      }
+.#{prefixed('BorderWidth0_8')}      { border-width: 0.8px;      }
+.#{prefixed('BorderWidth0_9')}      { border-width: 0.9px;      }
+.#{prefixed('BorderWidth1')}        { border-width: 1px;        }
+.#{prefixed('BorderWidth2')}        { border-width: 2px;        }
+.#{prefixed('BorderWidth3')}        { border-width: 3px;        }
+.#{prefixed('BorderWidth4')}        { border-width: 4px;        }
+.#{prefixed('BorderWidth5')}        { border-width: 5px;        }
+.#{prefixed('BorderWidth6')}        { border-width: 6px;        }
+.#{prefixed('BorderWidth7')}        { border-width: 7px;        }
+.#{prefixed('BorderWidth8')}        { border-width: 8px;        }
+
+/* Border visibility for each side */
+.#{prefixed('BorderTopNone')}                   { border-top: none;             }
+.#{prefixed('BorderTopVisibilityVisible')}      { border-top: visible;          }
+.#{prefixed('BorderTopVisibilityHidden')}       { border-top: hidden;           }
+.#{prefixed('BorderTopVisibilityCollapse')}     { border-top: collapse;         }
+.#{prefixed('BorderTopVisibilitySeparate')}     { border-top: separate;         }
+
+.#{prefixed('BorderRightNone')}                 { border-right: none;           }
+.#{prefixed('BorderRightVisibilityVisible')}    { border-right: visible;        }
+.#{prefixed('BorderRightVisibilityHidden')}     { border-right: hidden;         }
+.#{prefixed('BorderRightVisibilityCollapse')}   { border-right: collapse;       }
+.#{prefixed('BorderRightVisibilitySeparate')}   { border-right: separate;       }
+
+.#{prefixed('BorderBottomNone')}                { border-bottom: none;          }
+.#{prefixed('BorderBottomVisibilityVisible')}   { border-bottom: visible;       }
+.#{prefixed('BorderBottomVisibilityHidden')}    { border-bottom: hidden;        }
+.#{prefixed('BorderBottomVisibilityCollapse')}  { border-bottom: collapse;      }
+.#{prefixed('BorderBottomVisibilitySeparate')}  { border-bottom: separate;      }
+
+.#{prefixed('BorderLeftNone')}                  { border-left: none;            }
+.#{prefixed('BorderLeftVisibilityVisible')}     { border-left: visible;         }
+.#{prefixed('BorderLeftVisibilityHidden')}      { border-left: hidden;          }
+.#{prefixed('BorderLeftVisibilityCollapse')}    { border-left: collapse;        }
+.#{prefixed('BorderLeftVisibilitySeparate')}    { border-left: separate;        }
+
+
+
+/* Overflows */
+.#{prefixed('OverflowVisible')}                 { overflow: visible;            }
+.#{prefixed('OverflowHidden')}                  { overflow: hidden;             }
+.#{prefixed('OverflowScroll')}                  { overflow: scroll;             }
+.#{prefixed('OverflowAuto')}                    { overflow: auto;               }
+.#{prefixed('OverflowXVisible')}                { overflow-x: visible;          }
+.#{prefixed('OverflowXHidden')}                 { overflow-x: hidden;           }
+.#{prefixed('OverflowXScroll')}                 { overflow-x: scroll;           }
+.#{prefixed('OverflowXAuto')}                   { overflow-x: auto;             }
+.#{prefixed('OverflowYVisible')}                { overflow-y: visible;          }
+.#{prefixed('OverflowYHidden')}                 { overflow-y: hidden;           }
+.#{prefixed('OverflowYScroll')}                 { overflow-y: scroll;           }
+.#{prefixed('OverflowYAuto')}                   { overflow-y: auto;             }
+
+/* Background positions */
+.#{prefixed('BackgroundPositionTop')}           { background-position: top;             }
+.#{prefixed('BackgroundPositionRight')}         { background-position: right;           }
+.#{prefixed('BackgroundPositionBottom')}        { background-position: bottom;          }
+.#{prefixed('BackgroundPositionLeft')}          { background-position: left;            }
+.#{prefixed('BackgroundPositionCenter')}        { background-position: center;          }
+.#{prefixed('BackgroundPositionTopLeft')}       { background-position: top left;        }
+.#{prefixed('BackgroundPositionTopRight')}      { background-position: top right;       }
+.#{prefixed('BackgroundPositionBottomLeft')}    { background-position: bottom left;     }
+.#{prefixed('BackgroundPositionBottomRight')}   { background-position: bottom right;    }
+.#{prefixed('BackgroundPositionTopCenter')}     { background-position: top center;      }
+.#{prefixed('BackgroundPositionBottomCenter')}  { background-position: bottom center;   }
+.#{prefixed('BackgroundPositionLeftCenter')}    { background-position: left center;     }
+.#{prefixed('BackgroundPositionRightCenter')}   { background-position: right center;    }
+
+/* Background repeats */
+.#{prefixed('BackgroundRepeat')}        { background-repeat: repeat;        }
+.#{prefixed('BackgroundRepeatX')}       { background-repeat: repeat-x;      }
+.#{prefixed('BackgroundRepeatY')}       { background-repeat: repeat-y;      }
+.#{prefixed('BackgroundNoRepeat')}      { background-repeat: no-repeat;     }
+
+/* Background sizes */
+.#{prefixed('BackgroundSizeCover')}     { background-size: cover;           }
+.#{prefixed('BackgroundSizeContain')}   { background-size: contain;         }
+
+/* Images */
+.#{prefixed('VolvoXC40White')}          { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../public/images/VolvoXC40White.jpg);          }
+.#{prefixed('VolvoOceanSmallScreen')}   { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../public/images/VolvoOceanSmallScreen.jpg);   }
+.#{prefixed('GuyInCar')}                { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../public/images/GuyInCar.png);                }
+.#{prefixed('WomanExitsCar')}           { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../public/images//WomanExitsCar.png);          }
+
+/* Custom stuff */
+.#{prefixed('HeightAuto')}              { height: auto;                     }
+.#{prefixed('WidthAuto')}               { width: auto;                      }
+.#{prefixed('MinHeight100vh')}          { min-height: 100vh;                }
+.#{prefixed('MinHeight80vh')}           { min-height: 80vh;                 }
+.#{prefixed('MinHeight70vh')}           { min-height: 70vh;                 }
+.#{prefixed('MinHeight65vh')}           { min-height: 65vh;                 }
+.#{prefixed('MinHeight60vh')}           { min-height: 60vh;                 }
+.#{prefixed('MinHeight50vh')}           { min-height: 50vh;                 }
+.#{prefixed('TranslateCenter')}         { transform: translate(-50%, -50%); }
+.#{prefixed('FlexWrap')}                { flex-wrap: wrap;                  }
+.#{prefixed('FontNone')}                { font-family: none;                }
+
+/* Box Shadows */
+.#{prefixed('BoxShadow1')} { 
+    box-shadow: 
+        5px 5px 10px #191919, 
+        -5px 5px 10px #191919, 
+        0px 5px 10px #191919, 
+        5px 0px 10px #191919;
+}
+
+/* Font Style in Placeholders */
+.#{prefixed('FontStylePlaceholderItalic::placeholder')}         { font-style: italic;               }
+.#{prefixed('FontStylePlaceholderNormal::placeholder')}         { font-style: normal;               }
+.#{prefixed('FontStylePlaceholderOblique::placeholder')}        { font-style: oblique;              }
+
+/* Text Alignments */
+.#{prefixed('TextAlignLeft')}                                   { text-align: left;                 }
+.#{prefixed('TextAlignCenter')}                                 { text-align: center;               }
+.#{prefixed('TextAlignRight')}                                  { text-align: right;                }
+.#{prefixed('TextAlignJustify')}                                { text-align: justify;              }
+
+/* Flex Directions */
+.#{prefixed('FlexDirectionRow')}                                { flex-direction: row;              }
+.#{prefixed('FlexDirectionRowReverse')}                         { flex-direction: row-reverse;      }
+.#{prefixed('FlexDirectionColumn')}                             { flex-direction: column;           }
+.#{prefixed('FlexDirectionColumnReverse')}                      { flex-direction: column-reverse;   }
+
+/* Hover Scales */
+.#{prefixed('HoverScale1:hover')}                              { transform: scale(1.0);            }
+.#{prefixed('HoverScale1_1:hover')}                            { transform: scale(1.1);            }
+.#{prefixed('HoverScale1_2:hover')}                            { transform: scale(1.2);            }
+.#{prefixed('HoverScale1_3:hover')}                            { transform: scale(1.3);            }
+.#{prefixed('HoverScale1_4:hover')}                            { transform: scale(1.4);            }
+.#{prefixed('HoverScale1_5:hover')}                            { transform: scale(1.5);            }
+.#{prefixed('HoverScale1_6:hover')}                            { transform: scale(1.6);            }
+.#{prefixed('HoverScale1_7:hover')}                            { transform: scale(1.7);            }
+.#{prefixed('HoverScale1_8:hover')}                            { transform: scale(1.8);            }
+.#{prefixed('HoverScale1_9:hover')}                            { transform: scale(1.9);            }
+.#{prefixed('HoverScale2:hover')}                              { transform: scale(2.0);            }
+
+/* User Selects */
+.#{prefixed('UserSelectNone')}                                 { user-select: none;                }
+.#{prefixed('UserSelectAuto')}                                 { user-select: auto;                }
+.#{prefixed('UserSelectText')}                                 { user-select: text;                }
+.#{prefixed('UserSelectAll')}                                  { user-select: all;                 }
+.#{prefixed('UserSelectContain')}                              { user-select: contain;             }
+.#{prefixed('UserSelectInherit')}                              { user-select: inherit;             }
+.#{prefixed('UserSelectInitial')}                              { user-select: initial;             }
+
+/* Object Fit */
+.#{prefixed('ObjectFitFill')}                                  { object-fit: fill;                 }
+.#{prefixed('ObjectFitContain')}                               { object-fit: contain;              }
+.#{prefixed('ObjectFitCover')}                                 { object-fit: cover;                }
+.#{prefixed('ObjectFitNone')}                                  { object-fit: none;                 }
+.#{prefixed('ObjectFitScaleDown')}                             { object-fit: scale-down;           }

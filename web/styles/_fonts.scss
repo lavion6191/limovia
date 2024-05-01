@@ -1,0 +1,33 @@
+// Raleway
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap');
+.#{prefixed('FontRaleway')} { font-family: 'Raleway', sans-serif }
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+.#{prefixed('FontRoboto')}  { font-family: 'Roboto', sans-serif }
+
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+.#{prefixed('FontMontserrat')} { font-family: 'Montserrat', sans-serif }
+
+// Font Awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+.#{prefixed('FontAwesome')} { font-family: font-awesome }
+
+// Isabel Light
+@font-face {
+    font-family: 'Isabel Light';
+    src: url('../public/fonts/Fontspring-DEMO-isabel-light.woff2') format('woff2'),
+         url('../public/fonts/Fontspring-DEMO-isabel-light.woff') format('woff2');
+}
+.#{prefixed('FontIsabel')} { font-family: 'Isabel Light', sans-serif }
+
+/* Times New Roman */
+.#{prefixed('FontTimesNewRoman')} { font-family: "Times New Roman", Times, serif }
+
+/* Arial */
+.#{prefixed('FontArial')} { font-family: Arial, Helvetica, sans-serif }
+
+/* Hedvig Letters Serif */
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:wght@400;700&display=swap');
+.#{prefixed('FontHedvigLettersSerif')} { font-family: 'Hedvig Letters Serif', serif }

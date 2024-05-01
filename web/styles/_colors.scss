@@ -1,0 +1,210 @@
+$colors: (
+    /* Custom colors */
+    xPrimary1:              rgba(148, 101, 43, 1),
+    xPrimary2:              rgba(214, 192, 118, 1),
+    xCustomBlack1:          #191919,
+    xCustomBlack2:          rgba(0, 0, 0, 0.895),
+    xCustomGray1:           #373B4D,
+    xCustomOrange1:         #D49641,
+    xCustomLightOrange1:    #D4A78C,
+    xCustomLightGray1:      #ccc,
+    xCustomLightPink:       #E6D8D7,
+    xSemiTransparent:       rgba(0, 0, 0, 0.159),
+    xSemiTransparentWhite:  rgba(255, 255, 255, 0.788),
+
+    /* Default colors */
+    xAliceBlue:             #F0F8FF,
+    xAntiqueWhite:          #FAEBD7,
+    xAquamarine:            #7FFFD4,
+    xAzure:                 #F0FFFF,
+    xBeige:                 #F5F5DC,
+    xBisque:                #FFE4C4,
+    xBlack:                 #000000,
+    xBlanchedAlmond:        #FFEBCD,
+    xBlue:                  #0000FF,
+    xBlueViolet:            #8A2BE2,
+    xBrown:                 #A52A2A,
+    xBurlyWood:             #DEB887,
+    xCadetBlue:             #5F9EA0,
+    xChartreuse:            #7FFF00,
+    xChocolate:             #D2691E,
+    xCoral:                 #FF7F50,
+    xCornflowerBlue:        #6495ED,
+    xCornsilk:              #FFF8DC,
+    xCrimson:               #DC143C,
+    xCyan:                  #00FFFF,
+    xDarkBlue:              #00008B,
+    xDarkCyan:              #008B8B,
+    xDarkGoldenRod:         #B8860B,
+    xDarkGray:              #A9A9A9,
+    xDarkGreen:             #006400,
+    xDarkKhaki:             #BDB76B,
+    xDarkMagenta:           #8B008B,
+    xDarkOliveGreen:        #556B2F,
+    xDarkOrange:            #FF8C00,
+    xDarkOrchid:            #9932CC,
+    xDarkRed:               #8B0000,
+    xDarkSalmon:            #E9967A,
+    xDarkSeaGreen:          #8FBC8F,
+    xDarkSlateBlue:         #483D8B,
+    xDarkSlateGray:         #2F4F4F,
+    xDarkTurquoise:         #00CED1,
+    xDarkViolet:            #9400D3,
+    xDeepPink:              #FF1493,
+    xDeepSkyBlue:           #00BFFF,
+    xDimGray:               #696969,
+    xDodgerBlue:            #1E90FF,
+    xFireBrick:             #B22222,
+    xFloralWhite:           #FFFAF0,
+    xForestGreen:           #228B22,
+    xGainsboro:             #DCDCDC,
+    xGhostWhite:            #F8F8FF,
+    xGold:                  #FFD700,
+    xGoldenRod:             #DAA520,
+    xGray:                  #808080,
+    xGreen:                 #008000,
+    xGreenYellow:           #ADFF2F,
+    xHoneyDew:              #F0FFF0,
+    xHotPink:               #FF69B4,
+    xIndianRed:             #CD5C5C,
+    xIndigo:                #4B0082,
+    xIvory:                 #FFFFF0,
+    xKhaki:                 #F0E68C,
+    xLavender:              #E6E6FA,
+    xLavenderBlush:         #FFF0F5,
+    xLawnGreen:             #7CFC00,
+    xLemonChiffon:          #FFFACD,
+    xLightBlue:             #ADD8E6,
+    xLightCoral:            #F08080,
+    xLightCyan:             #E0FFFF,
+    xLightGoldenRodYellow:  #FAFAD2,
+    xLightGray:             #D3D3D3,
+    xLightGreen:            #90EE90,
+    xLightPink:             #FFB6C1,
+    xLightSalmon:           #FFA07A,
+    xLightSeaGreen:         #20B2AA,
+    xLightSkyBlue:          #87CEFA,
+    xLightSlateGray:        #778899,
+    xLightSteelBlue:        #B0C4DE,
+    xLightYellow:           #FFFFE0,
+    xLime:                  #00FF00,
+    xLimeGreen:             #32CD32,
+    xLinen:                 #FAF0E6,
+    xMagenta:               #FF00FF,
+    xMaroon:                #800000,
+    xMediumAquaMarine:      #66CDAA,
+    xMediumBlue:            #0000CD,
+    xMediumOrchid:          #BA55D3,
+    xMediumPurple:          #9370DB,
+    xMediumSeaGreen:        #3CB371,
+    xMediumSlateBlue:       #7B68EE,
+    xMediumSpringGreen:     #00FA9A,
+    xMediumTurquoise:       #48D1CC,
+    xMediumVioletRed:       #C71585,
+    xMidnightBlue:          #191970,
+    xMintCream:             #F5FFFA,
+    xMistyRose:             #FFE4E1,
+    xMoccasin:              #FFE4B5,
+    xNavajoWhite:           #FFDEAD,
+    xNavy:                  #000080,
+    xOldLace:               #FDF5E6,
+    xOlive:                 #808000,
+    xOliveDrab:             #6B8E23,
+    xOrange:                #FFA500,
+    xOrangeRed:             #FF4500,
+    xOrchid:                #DA70D6,
+    xPaleGoldenRod:         #EEE8AA,
+    xPaleGreen:             #98FB98,
+    xPaleTurquoise:         #AFEEEE,
+    xPaleVioletRed:         #DB7093,
+    xPapayaWhip:            #FFEFD5,
+    xPeachPuff:             #FFDAB9,
+    xPeru:                  #CD853F,
+    xPink:                  #FFC0CB,
+    xPlum:                  #DDA0DD,
+    xPowderBlue:            #B0E0E6,
+    xPurple:                #800080,
+    xRebeccaPurple:         #663399,
+    xRed:                   #FF0000,
+    xRosyBrown:             #BC8F8F,
+    xRoyalBlue:             #4169E1,
+    xSaddleBrown:           #8B4513,
+    xSalmon:                #FA8072,
+    xSandyBrown:            #F4A460,
+    xSeaGreen:              #2E8B57,
+    xSeaShell:              #FFF5EE,
+    xSienna:                #A0522D,
+    xSilver:                #C0C0C0,
+    xSkyBlue:               #87CEEB,
+    xSlateBlue:             #6A5ACD,
+    xSlateGray:             #708090,
+    xSnow:                  #FFFAFA,
+    xSpringGreen:           #00FF7F,
+    xSteelBlue:             #4682B4,
+    xTan:                   #D2B48C,
+    xTeal:                  #008080,
+    xThistle:               #D8BFD8,
+    xTomato:                #FF6347,
+    xTurquoise:             #40E0D0,
+    xViolet:                #EE82EE,
+    xWheat:                 #F5DEB3,
+    xWhite:                 #FFFFFF,
+    xWhiteSmoke:            #F5F5F5,
+    xYellow:                #FFFF00,
+    xYellowGreen:           #9ACD32,
+);
+
+
+
+// Generate CSS variables
+.#{prefixed('Wrapper')} {
+    @each $name, $color in $colors {
+        $strippedName: str-slice($name, 2);
+        --#{$strippedName}: #{$color};
+    }
+}
+
+
+// Generate color classes
+@mixin generateColorClasses($colors) {
+    @each $name, $color in $colors {
+        $strippedName: str-slice($name, 2);
+      
+        .#{$prefix}Color#{$strippedName} {
+            color: $color;
+        }
+  
+        .#{$prefix}BgColor#{$strippedName} {
+            background-color: $color;
+        }
+  
+        .#{$prefix}BorderColor#{$strippedName} {
+            border-color: $color;
+        }
+
+        .#{$prefix}PlaceholderColor#{$strippedName}::placeholder {
+            color: $color;
+        }
+
+        // Hover effect
+        .#{$prefix}HoverColor#{$strippedName}:hover {
+            color: $color;
+        }
+
+        .#{$prefix}HoverBgColor#{$strippedName}:hover {
+            background-color: $color;
+        }
+
+        // Focus effect
+        .#{$prefix}FocusColor#{$strippedName}:focus {
+            color: $color;
+        }
+
+        .#{$prefix}FocusBgColor#{$strippedName}:focus {
+            background-color: $color;
+        }
+    }
+}
+  
+@include generateColorClasses($colors);
+  
