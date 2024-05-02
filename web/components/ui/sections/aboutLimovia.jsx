@@ -64,7 +64,7 @@ export default function AboutLimovia() {
                             }/>
                         </div>
  
-                        <figcaption className={`${styles.lvTextAlignCenter} ${styles.lvFontSize35} ${styles.lvW100} ${styles.lvColorCustomLightPink} ${styles.lvPaddingTop25}`}>
+                        <figcaption className={`${styles.lvTextAlignCenter} ${media.mobileScreen ? `${styles.lvFontSize18}` : `${media.extraSmallScreen ? `${styles.lvFontSize20}` : `${styles.lvFontSize25}`}`} ${styles.lvW100} ${styles.lvColorCustomLightPink} ${styles.lvPaddingTop25}`}>
                             <h1 className={`${styles.lvFontWeightLighter}`}>
                                 LIMOVIA: <br/>
                                 TRANSPORTTJÄNSTER DU BEHÖVER
@@ -141,14 +141,14 @@ export default function AboutLimovia() {
                 ))}
 
                 <a 
-                className={`${styles.lvCursorPointer} ${styles.lvPositionAbsolute} ${styles.lvTop40P} ${styles.lvWidthAuto} ${styles.lvPadding20} ${styles.lvColorWhite} ${styles.lvFontWeight100} ${styles.lvFontSize30} ${styles.lvUserSelectNone} ${styles.lvTransition500} ${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `` : `${styles.lvMarginX40}`}`}
+                className={`${media.mobileScreen || media.extraSmallScreen ? `${styles.lvNone}` : ``} ${styles.lvCursorPointer} ${styles.lvPositionAbsolute} ${styles.lvTop40P} ${styles.lvWidthAuto} ${styles.lvPadding20} ${styles.lvColorWhite} ${styles.lvFontWeight100} ${styles.lvFontSize30} ${styles.lvUserSelectNone} ${styles.lvTransition500} ${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `` : `${styles.lvMarginX40}`}`}
                 onClick={() => { plusSlides(-1); }}
                 >
                     ❮
                 </a>
 
                 <a 
-                className={`${styles.lvCursorPointer} ${styles.lvPositionAbsolute} ${styles.lvTop40P} ${styles.lvWidthAuto} ${styles.lvPadding20} ${styles.lvColorWhite} ${styles.lvFontWeight100} ${styles.lvFontSize30} ${styles.lvUserSelectNone} ${styles.lvTransition500} ${styles.lvRight0} ${styles.lvBorderRadiusTopRight3} ${styles.lvBorderRadiusTopLeft3} ${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `` : `${styles.lvMarginX40}`}`}
+                className={`${media.mobileScreen || media.extraSmallScreen ? `${styles.lvNone}` : ``} ${styles.lvCursorPointer} ${styles.lvPositionAbsolute} ${styles.lvTop40P} ${styles.lvWidthAuto} ${styles.lvPadding20} ${styles.lvColorWhite} ${styles.lvFontWeight100} ${styles.lvFontSize30} ${styles.lvUserSelectNone} ${styles.lvTransition500} ${styles.lvRight0} ${styles.lvBorderRadiusTopRight3} ${styles.lvBorderRadiusTopLeft3} ${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `` : `${styles.lvMarginX40}`}`}
                 onClick={() => { plusSlides(1); }}
                 >
                     ❯

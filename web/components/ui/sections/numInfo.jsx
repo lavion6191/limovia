@@ -29,7 +29,7 @@ export default function NumInfo() {
         <>
             {/* Display numerical information */}
             <section>
-                <div className={`${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `${styles.lvGrid}` : `${styles.lvFlex}`} ${styles.lvJustifyContentSpaceEvenly} ${styles.lvAlignItemsCenter} ${styles.lvTextAlignCenter} ${styles.lvFlexWrap} ${styles.lvW100} ${styles.lvPadding50} ${styles.lvBgColorBlack} ${styles.lvColorCustomLightPink} ${styles.lvBoxSizingBorderBox}`}>
+                <div className={`${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `${styles.lvGrid} ${styles.lvAlignItemsCenter} ${styles.lvJustifyContentCenter}` : `${styles.lvFlex}`} ${styles.lvJustifyContentSpaceEvenly} ${styles.lvAlignItemsCenter} ${styles.lvTextAlignCenter} ${styles.lvFlexWrap} ${styles.lvW100} ${styles.lvPadding50} ${styles.lvBgColorBlack} ${styles.lvColorCustomLightPink} ${styles.lvBoxSizingBorderBox}`}>
                     <NumCard top="24/7" bottom="Boka dygnet runt" />
                     <hr className={` ${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `${styles.lvMargin40}` : `${styles.lvMargin10} ${styles.lvW10}`} ${styles.lvBorderStyleSolid} ${styles.lvBorderRadius5} ${styles.lvBgColorCustomOrange1}`} style={media.mobileScreen || media.extraSmallScreen || media.smallScreen ? { transform: "rotate(0deg)", width: "25rem" } : { transform: "rotate(90deg)" }} />
                     <NumCard top="12" bottom="Olika Regioner" />

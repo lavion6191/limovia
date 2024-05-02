@@ -10,7 +10,7 @@ export default function CommonQuestions() {
 
     return(
         <>
-            <section id="FAQ" data-offset="71" className={`${styles.lvMinHeight60vh} ${styles.lvW100} ${styles.lvWomanExitsCar} ${styles.lvBackgroundPositionCenter} ${styles.lvBackgroundNoRepeat} ${styles.lvBackgroundSizeCover} ${styles.lvPositionRelative}`}>
+            <section id="FAQ" data-offset="71" className={`${styles.lvMinHeight60vh} ${styles.lvW100} ${styles.lvWomanExitsCar} ${styles.lvBackgroundPositionCenter} ${styles.lvBackgroundNoRepeat} ${styles.lvBackgroundSizeCover} ${styles.lvPositionRelative} ${styles.lvFontNone}`}>
                 <div className={`${styles.lvTop50P} ${styles.lvLeft50P} ${styles.lvPositionAbsolute} ${styles.lvTranslateCenter} ${styles.lvLetterSpacing1} ${styles.lvColorWhite} ${styles.lvTextAlignCenter} ${styles.lvBoxSizingBorderBox} ${styles.lvPadding20} ${!media.largeScreen ? `${styles.lvW100}` : ``}`}>
                     <h1 className={`${styles.lvPaddingBottom20} ${styles.lvFontSize45} ${styles.lvFontWeight400}`}>
                         Allt du behöver veta
@@ -26,7 +26,7 @@ export default function CommonQuestions() {
                     <form className={`${styles.lvFlex}`} action="https://youtu.be/0-7IHOXkiV8?si=Ipa8abByRP5gL_aY&amp;t=116">
                         <input 
                         type="text"
-                        className={`${styles.lvPadding17} ${styles.lvBorderStyleSolid} ${isFocused ? styles.lvBorderColorWhite : styles.lvBorderColorCustomGray1} ${styles.lvBorderWidth2} ${styles.lvBorderRightNone} ${styles.lvBgColorBlack} ${styles.lvFontRoboto} ${styles.lvOutlineNone} ${styles.lvFontSize15} ${styles.lvWidth430} ${styles.lvFontStyleOblique} ${styles.lvTransition500} ${styles.lvColorAliceBlue} ${styles.lvPlaceholderColorCustomGray1} ${styles.lvPlaceholderFontSize18}`}
+                        className={`${styles.lvPadding17} ${styles.lvBorderStyleSolid} ${isFocused ? styles.lvBorderColorWhite : styles.lvBorderColorCustomGray1} ${styles.lvBorderWidth2} ${styles.lvBorderRightNone} ${styles.lvBgColorBlack} ${styles.lvFontRoboto} ${styles.lvOutlineNone} ${styles.lvFontSize15} ${media.mobileScreen ? `${styles.lvWidth250}` : `${media.extraSmallScreen ? `${styles.lvWidth300}` : `${styles.lvWidth430}`}`} ${styles.lvFontStyleOblique} ${styles.lvTransition500} ${styles.lvColorAliceBlue} ${styles.lvPlaceholderColorCustomGray1} ${styles.lvPlaceholderFontSize18}`}
                         placeholder="sök här" 
                         name="search" 
                         required="" 
@@ -48,7 +48,7 @@ export default function CommonQuestions() {
                     </form>
                 </div>
 
-                <div className={`${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `${styles.lvGrid}`:`${styles.lvFlex}`} ${styles.lvAlignItemsFlexStart} ${styles.lvJustifyContentCenter} ${styles.lvColorWhite} ${styles.lvPaddingTop70}`} 
+                <div className={`${media.mobileScreen || media.extraSmallScreen || media.smallScreen ? `${styles.lvGrid}`:`${styles.lvFlex}`} ${media.mobileScreen || media.extraSmallScreen ? `${styles.lvTextAlignCenter}` : ``} ${styles.lvAlignItemsFlexStart} ${styles.lvJustifyContentCenter} ${styles.lvColorWhite} ${styles.lvPaddingTop70}`} 
                 style={{ 
                     gridTemplateColumns: `${media.mobileScreen || media.extraSmallScreen ? `repeat(1, 1fr)` : `${media.smallScreen ? `repeat(2, 1fr)` : ``}`}` 
                 }}>
