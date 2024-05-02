@@ -33,3 +33,6 @@
 # typescript
 **/*.tsbuildinfo
 **/next-env.d.ts
+
+# sass
+**/.sass-cache
