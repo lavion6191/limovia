@@ -11,6 +11,7 @@ $prefix: lv;
 @import 'mixins';
 
 /* Displays */
+.#{prefixed('None')}                        { display: none;            }
 .#{prefixed('Block')}                       { display: block;           }
 .#{prefixed('Flex')}                        { display: flex;            }
 .#{prefixed('InlineBlock')}                 { display: inline-block;    }
